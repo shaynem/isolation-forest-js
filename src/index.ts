@@ -67,7 +67,8 @@ export class IsolationForest {
 
   private getSubsample(subsampleSize: number): DataObject[] {
     const subsample = [];
-    const data: DataObject[] = shuffle(this.X.slice(0));
+    //const data: DataObject[] = shuffle(this.X.slice(0));
+    const data: DataObject[] = this.X.slice(0);
     return data.slice(0, subsampleSize);
   }
 }
